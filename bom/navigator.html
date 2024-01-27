@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The Navigator Object</h2>
+
+<p>The cookieEnabled property returns true if cookies are enabled:</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"<br>navigator.cookieEnabled is " + navigator.cookieEnabled
++ "<br>navigator.appName is " + navigator.appName
++ "<br>navigator.appCodeName is " + navigator.appCodeName
++ "<br>navigator.product is " + navigator.product
++ "<br>navigator.appVersion is " +  navigator.appVersion
++ "<br>navigator.userAgent is " + navigator.userAgent
++ "<br>navigator.platform is " + navigator.platform
++ "<br>navigator.language is " + navigator.language
++ "<br>navigator.onLine is " + navigator.onLine
++ "<br>navigator.javaEnabled()" + navigator.javaEnabled();
+</script>
+
+</body>
+</html>
+<!-- 
+navigator.cookieEnabled is true
+navigator.appName is Netscape
+navigator.appCodeName is Mozilla
+navigator.product is Gecko
+navigator.appVersion is 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+navigator.userAgent is Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.102 Safari/537.36
+navigator.platform is Win32
+navigator.language is en-GB
+navigator.onLine is true
+navigator.javaEnabled()false
+
+    The window.navigator object contains information about the visitor's browser.
+    The cookieEnabled property returns true if cookies are enabled, otherwise false:
+
+    Strange enough, "Netscape" is the application name for both IE11, Chrome, Firefox, and Safari.
+    "Mozilla" is the application code name for both Chrome, Firefox, IE, Safari, and Opera.
+
+    Do not rely on navigator.product. Most browsers returns "Gecko" as product name !!
+    The appVersion property returns version information about the browser
+
+    The userAgent property returns the user-agent header sent by the browser to the server
+    The platform property returns the browser platform (operating system):
+
+    The javaEnabled() method returns true if Java is enabled:
+    The onLine property returns true if the browser is online:
+
+    Warning !!!
+    The information from the navigator object can often be misleading, and should not be used to detect
+    browser versions because:
+
+    Different browsers can use the same name
+    The navigator data can be changed by the browser owner
+    Some browsers misidentify themselves to bypass site tests
+    Browsers cannot report new operating systems, released later than the browser
+ -->

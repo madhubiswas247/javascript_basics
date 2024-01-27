@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 class="example">A heading with class="example"</h2>
+<p class="example">A paragraph with class="example".</p> 
+
+<p>Click the button to add a background color to the first element in the document with class="example".</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.querySelector(".example").style.backgroundColor = "red";
+}
+</script>
+
+</body>
+</html>
+
+<!-- 
+The querySelector() method returns the first element that matches a specified CSS selector(s) in the document.
+
+Note: The querySelector() method only returns the first element that matches the specified selectors. 
+To return all the matches, use the querySelectorAll() method instead.
+
+If the selector matches an ID in document that is used several times (Note that an "id" should be unique 
+within a page and should not be used more than once), it returns the first matching element.
+
+
+ -->

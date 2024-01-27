@@ -1,0 +1,23 @@
+00000<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The formaction attribute</h1>
+
+<form action="/form/get.html">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">     <!--routes to get.html-->
+  <input type="submit" formaction="/form/formList.html" value="Submit to another page">    <!--routes to formList.html-->
+  
+</form>
+
+</body>
+</html>
+
+<!-- <input formaction="URL">
+An absolute URL - the full address of a page (like href="http://www.example.com/formresult.asp")
+A relative URL - points to a file within the current site (like href="formresult.asp")
+-->

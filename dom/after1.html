@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		HTML | DOM after() Method 
+	</title> 
+</head> 
+
+<body> 
+	<div id="div"> 
+		<h1>GeeksforGeeks</h1> 
+		<p id="p">Child Node</p> 
+	</div> 
+
+	<button onclick="add()"> 
+		click to add 
+	</button> 
+	
+	<script> 
+		// Get the parent element 
+		var parent = document.getElementById("div"); 
+		console.log(parent) 
+
+		// Get the element to add after 
+		var para = document.getElementById("p"); 
+
+		// Function to add the element 
+		function add() { 
+
+			// Insert a text element 
+			// after this element 
+			para.after("Text Added"); 
+		} 
+		console.log(parent.outerHTML); 
+	</script> 
+</body> 
+
+</html> 
+<!-- In this example, we will insert some text after the child node. -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>DOM getAttribute() Method </title> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 style="color:green;width:50%;"> 
+			GeeksForGeeks 
+		</h1> 
+
+		<h2>DOM getAttribute() Method </h2> 
+		<br> 
+		<button id="button" onclick="geeks()"> 
+			Submit 
+		</button> 
+		<p id="gfg"></p> 
+
+		<script> 
+			function geeks() { 
+				var rk = 
+					document.getElementById("button").getAttribute("onClick"); 
+					document.getElementById("gfg").innerHTML = rk; 
+			} 
+		</script> 
+
+	</center> 
+</body> 
+
+</html> 
+<!-- 
+DOM getAttribute() method is used to get the value of the attribute of the element. 
+By specifying the name of the attribute, it can get the value of that element. To get 
+the values from non-standard attributes we can use getAttribute() method.
+
+Syntax: It returns the string containing the attribute’s value.
+
+Object.getAttribute(attributename)
+
+
+
+
+ -->

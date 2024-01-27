@@ -1,0 +1,17 @@
+<form action="/helloMessage.php">
+    <input type="text" id="name" /><br />
+  
+    <button type="submit"></button>
+  </form>
+  <!-- 
+On clicking the button, the page will submit data to helloMessage.php, receives any response
+ from PHP page, and (can be configured to) displays
+ the response. [Or, the page could redirect somewhere else based on the submission status
+
+ Each form submission therefore is followed by a page refresh, which is not a good user experience.
+
+We can avoid the refresh by using a custom function to supply data to server and show response. 
+We will use an event raised on button click to eliminate submit altogether.
+   -->
+
+   <button type="button" onclick="submitSomething()">Submit</button>

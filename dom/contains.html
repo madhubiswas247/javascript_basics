@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>HTML | DOM contains() Method</title> 
+	<!--script to check, if a node contains descendant-->
+	<script> 
+		function containchild() { 
+			var span = 
+			document.getElementById("sp1"); 
+			var div = 
+            document.getElementById("para1").contains(span); 
+            console.log(div)
+			document.getElementById("result").innerHTML = div; 
+		} 
+	</script> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 style="color:green"> 
+			Welcome to GeeksforGeeks</h1></center> 
+	<div id="para1"> 
+		<p>Social media is not about the 
+		<span id="sp1">exploitation of technology</span> 
+		but service to community.</p> 
+	</div> 
+
+	<p>Click the button to find out if the div 
+	element contains a span element.</p> 
+
+	<button onclick="containchild()">Check</button> 
+
+	<!--for displaying boolean value -->
+	<p id="result"></p> 
+</body> 
+
+</html>					 
+
+<!-- 
+The contains() method is used to find whether the specified node is a descendant of the given node.
+This descendant can be a child, grandchild, great-grandchild, and so on.
+
+Syntax:
+
+node.contains( otherNode ) 
+Parameters: The “othernode” in the syntax is the parameter required in this function.
+
+Return Value: It returns true if node is descendant of the given node else false.
+
+
+
+ -->

@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		HTML DOM matches() Method 
+	</title> 
+</head> 
+
+<body> 
+	<h1>GeeksforGeeks</h1> 
+
+	<ul id="abc"> 
+		<li>A</li> 
+		<li class="number">1</li> 
+		<li>C</li> 
+		<li class="number">2</li> 
+	</ul> 
+
+	<script> 
+		var abc = document.getElementsByTagName('li'); 
+		for (var i = 0; i < abc.length; i++) { 
+			if (abc[i].matches('.number')) { 
+				document.write(abc[i].textContent 
+					+ ' is not an alphabet , '); 
+			} 
+		} 
+	</script> 
+</body> 
+
+</html> 
+
+<!-- 
+The matches() method checks if the Element that would be selected by the provided selectorString 
+is the selector. If the specified element is the valid selector then it will return true, else false.
+
+Syntax:
+var boolean_result = element.matches("selector");
+Parameters: Here, selector is used as a parameter.
+
+Return value: It returns Boolean value i.e. (True when selector matches else false).
+
+Example: In this example, there is a list in which there are some elements that have class selector
+as number. So, we stored the list in a variable and by iterating on the list, if selector matches
+number class, then printing on the document correspondingly.
+ -->

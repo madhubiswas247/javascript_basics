@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>An unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>Click the button to display the innerHTML of the second li element (index 1).</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+function myFunction() {
+  var x = document.getElementsByTagName("LI");
+  document.getElementById("demo").innerHTML = x[1].innerHTML;
+  console.log(x[1].innerText)
+
+  var x = document.getElementsByTagName("li");
+  document.getElementById("demo1").innerHTML = x[1].innerHTML;
+  console.log(x[1].innerText)
+
+  var x = document.getElementsByTagName("ul");
+  document.getElementById("demo2").innerHTML = x.innerHTML;  
+  console.log(x.innerText)
+
+  var x = document.getElementsByTagName("ul");   //array
+  document.getElementById("demo3").innerHTML = x[0].innerHTML;  
+  console.log(x[0].innerText)
+//   undefined
+}
+</script>
+
+</body>
+</html>
+
+<!-- 
+The getElementsByTagName() method returns a collection of all elements in the document with
+ the specified tag name, as an HTMLCollection object.
+
+The HTMLCollection object represents a collection of nodes. The nodes can be accessed by 
+index numbers. The index starts at 0.
+
+Tip: The parametervalue "*" returns all elements in the document.
+
+Tip: You can use the length property of the HTMLCollection object to determine the number
+ of elements with the specified tag name, then you can loop through all elements and extract 
+ the info you want.
+
+
+ -->

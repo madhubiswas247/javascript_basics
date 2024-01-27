@@ -1,0 +1,32 @@
+<script type="text/javascript">  
+    function getcube(){  
+    var number=document.getElementById("number").value;  
+    alert(number*number*number);  
+    document.write("hiiiiiiiiii");
+    document.writeln("Have a nice day!");
+    document.writeln("Have a nice day!1");
+    }  
+    </script>  
+    <form>  
+    Enter No:<input type="text" id="number" name="number"/><br/>  
+    <input type="button" value="cube" onclick="getcube()"/>  
+    </form> 
+<!-- 
+    The document object represents the whole html document.
+
+When html document is loaded in the browser, it becomes a document object. 
+It is the root element that represents the html document. It has properties and methods. 
+By the help of document object, we can add dynamic content to our web page.
+The document.getElementById() method returns the element of specified id.
+window.document  Is same as document 
+
+The W3C Document Object Model (DOM) is a platform and language-neutral interface
+ that allows programs and scripts to dynamically access and update the content, structure, 
+ and style of a document.
+
+ Using document.write() after an HTML document is loaded, will delete all existing HTML
+ The document.write() method should only be used for testing.
+
+ Note: as document.write writes to the document stream, calling document.write on a closed (loaded) document automatically calls document.open, which will clear the document.
+
+-->

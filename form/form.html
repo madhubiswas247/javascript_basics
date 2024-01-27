@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form1" action="#" method="GET">
+ First number: <input type="text"  id="first"><br>
+  Second number: <input type="text" id="second" ><br>
+  Result: <input type="text" id="result"><br>
+  <button onclick="myFunction()">Add</button>
+</form> 
+
+
+<script>
+function myFunction() {
+var a = eval(document.getElementById("first").value);
+var b = eval(document.getElementById("second").value);
+document.getElementById("result").value = a+b;
+}
+</script>
+
+</body>
+</html>

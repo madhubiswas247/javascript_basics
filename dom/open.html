@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>DOM open() Method</title> 
+	</head> 
+	
+	<body> 
+		<p>GeeksforGeeks</p> 
+		
+		<button onclick = "Geeks()"> 
+			Click Here! 
+		</button> 
+		
+		<script> 
+			function Geeks() { 
+				
+				/* DOM open() method used here */ 
+				document.open("text/html", "replace"); 
+				document.write("<html><body><p>Welcome to " 
+					+ "GeeksforGeeks</p></body></html>"); 
+				document.close(); 
+			} 
+		</script> 
+	</body> 
+</html>					 
+
+
+<!-- 
+The DOM Open() method in HTML is the combination of the following three steps:
+
+Opens an output stream to collect the output.
+Collects output from the document.write() or document.writeln() methods.
+Runs the document.close to displays the output written to the output stream.
+Syntax:
+
+document.open( MIMEtype, replace )
+Parameter Values: This method accepts two parameters which are listed below:
+
+MIMEtype: It is the type of document, and it is an optional parameter. 
+The default value of this parameter is “text/html”.
+replace: It is optional parameter. If this value is set then the history entry for
+ the new document is inherit the history entry from the document.
+
+ -->

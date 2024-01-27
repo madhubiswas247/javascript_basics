@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>write example</title>
+
+  <script>
+    function newContent() {
+      document.open();
+      document.write("<h1>Out with the old - in with the new!</h1>");
+      document.close();
+    }
+  </script>
+</head>
+
+<body onload="newContent();">
+  <p>Some original document content.</p>
+</body>
+
+</html>
+
+
+    <!-- 
+The Document.write() method writes a string of text to a document stream opened by document.open().
+
+Note: as document.write writes to the document stream, calling document.write on a 
+closed (loaded) document automatically calls document.open, which will clear the document.
+
+Writing to a document that has already loaded without calling document.open() will automatically call document.open.
+ Once you have finished writing, it is recommended to call document.close() to tell the 
+ browser to finish loading the page. The text you write is parsed into the document's structure model.
+  In the example above, the h1 element becomes a node in the document.
+
+If the document.write() call is embedded within an inlined HTML <script> tag, then it will
+     not call document.open(). For example:
+
+<script> 
+  document.write("<h1>Main title</h1>") 
+</script>
+
+Disadvantage:-
+
+document.write and document.writeln do not work in XHTML documents (you'll get a "Operation is not 
+supported" [NS_ERROR_DOM_NOT_SUPPORTED_ERR] error in the error console). This happens when opening 
+a local file with the .xhtml file extension or for any document served with an application/xhtml+xml
+MIME type
+
+In Edge only, calling document.write more than once in an <iframe> causes the error SCRIPT70: Permission
+denied.
+
+Chrome will not execute <script> elements injected via document.write() in case of an HTTP cache miss
+for users on a 2G connection. 
+
+document.write in deferred or asynchronous scripts will be ignored, and you'll get a message like 
+"A call to document.write() from an asynchronously-loaded external script was ignored" in the error
+console.
+
+
+     -->

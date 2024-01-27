@@ -1,0 +1,49 @@
+<!-- 
+The window.location object can be used to get the current page address (URL) and 
+to redirect the browser to a new page.
+ -->
+
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+
+<p id="demo"></p>
+
+<input type="button" value="Load new document" onclick="newDoc()">
+<script>
+document.getElementById("demo").innerHTML = 
+  "The full URL of this page is:<br>" + window.location.href
++ "Page hostname is " + window.location.hostname
++ "Page protocol is " + window.location.protocol
++ "Page path is " + window.location.pathname
++ "Port number is " + window.location.port;
+
+function newDoc() {
+  window.location.assign("https://www.w3schools.com")
+}
+</script>
+
+</body>
+</html>
+<!-- 
+ he window.location.href property returns the URL of the current page.   
+Page location is https://www.w3schools.com/js/js_window_location.asp
+
+The window.location.hostname property returns the name of the internet host (of the current page).
+Page hostname is www.w3schools.com
+
+The window.location.pathname property returns the pathname of the current page.
+Page path is /js/js_window_location.asp
+
+The window.location.protocol property returns the web protocol of the page.
+Page protocol is https:
+
+he window.location.port property returns the number of the internet host port (of the current page).
+Most browsers will not display default port numbers (80 for http and 443 for https)
+
+The window.location.assign() method loads a new document.
+     -->

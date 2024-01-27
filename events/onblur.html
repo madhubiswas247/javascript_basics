@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()" onfocus="focusFunction()">
+
+<p>When you leave the input field, a function is triggered which 
+  transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+  document.getElementById("fname").style.background = "red";
+}
+
+function focusFunction() {
+  // Focus = Changes the background color of input to yellow
+  document.getElementById("fname").style.background = "yellow";
+}
+</script>
+
+</body>
+</html>
+
+<!-- The onblur event occurs when an object loses focus.
+
+The onblur event is most often used with form validation code (e.g. when the user leaves a form field).
+
+Tip: The onblur event is the opposite of the onfocus event.
+
+Tip: The onblur event is similar to the onfocusout event. The main difference is that the
+ onblur event does not bubble. Therefore, if you want to find out whether an element or its
+  child loses focus, you could use the onfocusout event. However, you can achieve this by 
+  using the optional useCapture parameter of the addEventListener() method for the onblur event. -->

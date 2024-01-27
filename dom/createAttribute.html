@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<title>DOM createAttribute Method</title> 
+		<style> 
+			.gfg { 
+				color: green; 
+				font-weight:bold; 
+				font-size:50px; 
+			} 
+			body { 
+				text-align:center; 
+			} 
+		</style> 
+	</head> 
+	<body> 
+		<h1>GeeksforGeeks</h1> 
+		<h2>DOM createAttribute() Method</h2> 
+		<button onclick="geeks()">Submit</button> 
+		<script> 
+		function geeks() { 
+			var tag_name = 
+				document.getElementsByTagName("h1")[0]; 
+			var attr = 
+				document.createAttribute("class"); 
+			attr.value = "gfg"; 
+			tag_name.setAttributeNode(attr); 
+		} 
+		</script> 
+	</body> 
+</html>					 
+<!-- 
+This createAttribute() method is used to create an attribute with the specified name and returns 
+the attribute object. The attribute.value property is used to set the value of the attribute and 
+the element.setAttribute() method is used to create a new attribute for an element. This method()
+contains the name of the created attribute as a parameter values.
+
+Syntax:
+
+document.createAttribute( attributename )
+
+ -->

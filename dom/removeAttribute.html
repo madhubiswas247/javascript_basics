@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+	HTML DOM removeAttribute Method 
+	</title> 
+	<style> 
+		.gfg { 
+			color: green; 
+		} 
+	</style> 
+</head> 
+
+<body style="text-align: center;"> 
+	<h1 style="color:green;"> 
+	GeeksforGeeks 
+	</h1> 
+
+	<h2> 
+	DOM removeAttribute Method 
+	</h2> 
+
+	<p id="p" class="gfg"> 
+	A computer science portal for geeks. 
+	</p> 
+
+	<button onclick="Geeks()"> 
+		Click Here! 
+	</button> 
+
+	<script> 
+		function Geeks() { 
+			//Remove class attributes from 'p' element. 
+			document.getElementById( 
+				"p").removeAttribute("class"); 
+		} 
+	</script> 
+</body> 
+
+</html> 
+<!-- 
+The DOM removeAttribute() method is used to remove an attribute with specified name from 
+the element. It is similar to removeAttributeNode() method but the difference is that the 
+removeAttributeNode method is used to remove the specified attribute object, but on the 
+other hand removeAttribute removes the attribute with the specified name.
+
+Syntax:
+
+element.removeAttribute(name)
+Where name is the string which specifies the name of the attribute to remove from the element.
+ It is the required field.
+
+
+
+ -->

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form1">
+  First Name: <input type="text" name="fname" value="Donald"><br>
+  Last Name: <input type="text" name="lname" value="Duck">
+</form>
+<br>
+<form id="form2">
+    First Name: <input type="text" name="fname" value="Donald"><br>
+    Last Name: <input type="text" name="lname" value="Duck">
+  </form>
+
+<p>Click the button to display the number of form elements in the document.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<script>
+function myFunction() {
+  var x = document.forms.length;
+  document.getElementById("demo").innerHTML = x;  //2
+  var x = document.forms[0].id;   //or document.forms.item(0).id;
+  document.getElementById("demo1").innerHTML = x;  //form1
+  var x = document.forms.namedItem("form2").innerHTML;
+  document.getElementById("demo2").innerHTML = x;  //HTML content of the <form> element 
+  var x = document.forms[0].fname.value;
+  document.getElementById("demo3").innerHTML = x; //Donald
+  var x = document.forms.form1.fname.value;
+  document.getElementById("demo4").innerHTML = x;   //Donald
+  var x = document.forms["form1"]["fname"].value; 
+  document.getElementById("demo5").innerHTML = x;  //Donald
+}
+
+</script>
+
+</body>
+</html>
+<!-- 
+
+    The forms collection returns a collection of all <form> elements in the document.
+
+Note: The elements in the collection are sorted as they appear in the source code.
+ -->

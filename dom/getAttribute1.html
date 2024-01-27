@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>DOM getAttribute() Method </title> 
+</head> 
+
+<body> 
+	<center> 
+		<h1 style="color:green;width:50%;"> 
+				GeeksForGeeks 
+			</h1> 
+		<h2>DOM getAttribute() Method </h2> 
+		<a id="gfg" href="www.geeksforgeeks.com"> 
+		Geeksforgeeks 
+		</a> 
+		<br> 
+		<br> 
+		<button id="button" onclick="geeks()"> 
+			Submit 
+		</button> 
+		<br> 
+		<p id="rk"></p> 
+
+		<script> 
+			function geeks() { 
+				var rk = 
+					document.getElementById("gfg").getAttribute("href"); 
+					document.getElementById("rk").innerHTML = rk; 
+			} 
+		</script> 
+
+	</center> 
+</body> 
+
+</html> 

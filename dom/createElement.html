@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to make a BUTTON element with text.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  var btn = document.createElement("BUTTON");
+  btn.innerHTML = "CLICK ME";
+  document.body.appendChild(btn);
+
+  var btn1 = document.createElement("button");
+  btn1.innerHTML = "CLICK ME";
+  document.body.appendChild(btn1);
+}
+</script>
+
+</body>
+</html>
+
+<!-- 
+The createElement() method creates an Element Node with the specified name.
+
+Tip: After the element is created, use the element.appendChild() or 
+element.insertBefore() method to insert it to the document.
+
+ -->

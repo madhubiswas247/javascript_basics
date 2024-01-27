@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form id="form1" >
+ <p id="num">23</p>
+ Enter number: <input type="text"  id="first"><br>
+  
+  <p id="p">Result: <input type="text" id="result"></p><br>
+  <button onclick="myFunction()">Add</button>
+</form> 
+
+
+<script>
+function myFunction() {
+var a = document.getElementById("num");
+var b = document.getElementById("first");
+console.log(a.innerHTML)   //23
+console.log(a.innerText)  //23
+console.log(a.value)  //undefined
+console.log(b.innerHTML)  //""
+console.log(b.innerText)  //""
+console.log(b.value)  //34
+
+if(a.innerHTML == b.value)
+{
+    document.getElementById("result").value = "success";
+} else {
+    document.getElementById("result").value = "fail";
+}
+console.log(document.getElementById("result").innerHTML)  //""
+console.log(document.getElementById("result").innerText)  //""
+console.log(document.getElementById("result").value)  //Fail
+
+console.log(document.getElementById("p").innerHTML)  //Result: <input type="text" id="result">
+console.log(document.getElementById("p").innerText)  //Result: 
+console.log(document.getElementById("p").value)  //undefined
+}
+</script>
+
+</body>
+</html>
